@@ -11,8 +11,8 @@ import CyberEssentials from '../assets/CyberEssentials.jpg';
 const certificatesData = [
   {
     title: "Design and Implementation of HCI",
-    issuer: "NPTEL",
-    date: "Jul 2024",
+    issuer: "Scaler",
+    date: "Feb 2025",
     skills: ["Human-Computer Interaction", "UI/UX Design"],
     image: DesignJava,
     color: "bg-gradient-to-br from-[#004AAD] to-[#0066CC]",
@@ -21,25 +21,16 @@ const certificatesData = [
   {
     title: "Cybersecurity Analyst Job Simulation",
     issuer: "Tata Forage",
-    date: "Feb 2025",
+    date: "Jun 2024",
     skills: ["Cybersecurity", "Threat Analysis", "Incident Response", "SIEM Tools"],
     image: Cyber,
     color: "bg-gradient-to-br from-[#0F4C75] to-[#3282B8]",
     link: "#"
   },
   {
-    title: "Career Path: Front-End Development",
-    issuer: "LinkedIn Learning",
-    date: "Mar 2025",
-    skills: ["HTML/CSS", "JavaScript", "React", "Responsive Design"],
-    image: Frontend,
-    color: "bg-gradient-to-br from-[#0077B5] to-[#00A0DC]",
-    link: "#"
-  },
-  {
     title: "Introduction to Cybersecurity Essentials",
     issuer: "IBM",
-    date: "Mar 2025",
+    date: "May 2024",
     skills: ["Cybersecurity Fundamentals", "Network Security", "Risk Management", "Security Best Practices"],
     image: CyberEssentials, // Add image path if available
     color: "bg-gradient-to-br from-[#052049] to-[#1F70C1]", // IBM blue gradient
@@ -48,7 +39,7 @@ const certificatesData = [
   {
     title: "Build Apps with ChatGPT, DALL·E, and GPT-4",
     issuer: "Coursera",
-    date: "Apr 2025",
+    date: "May 2024",
     skills: ["AI Integration", "ChatGPT API", "DALL·E", "GPT-4", "AI App Development"],
     image: build, // Add image path if available
     color: "bg-gradient-to-br from-[#0056D2] to-[#00A4E4]", // Coursera blue gradient
@@ -56,11 +47,20 @@ const certificatesData = [
   },
   {
     title: "ChatGPT Playground for Beginners: Intro to NLP AI",
-    issuer: "Udemy",
-    date: "May 2025",
+    issuer: "Coursera",
+    date: "May 2024",
     skills: ["Natural Language Processing", "ChatGPT", "AI Fundamentals", "Prompt Engineering"],
     image: Nlp, // Add image path if available
     color: "bg-gradient-to-br from-[#5E2B97] to-[#A435F0]", // Udemy purple gradient
+    link: "#"
+  },
+  {
+    title: "Career Path: Front-End Development",
+    issuer: "LinkedIn Learning",
+    date: "Feb 2024",
+    skills: ["HTML/CSS", "JavaScript", "React", "Responsive Design"],
+    image: Frontend,
+    color: "bg-gradient-to-br from-[#0077B5] to-[#00A0DC]",
     link: "#"
   }
 ];

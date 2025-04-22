@@ -3,13 +3,19 @@ import { motion } from "framer-motion";
 const AchievementsSection = () => {
   const achievements = [
     {
-      title: "CodeChef 4 Star Coder",
-      description: "Solved 300+ problems and achieved 4-star rating",
+      title: "Co-founder & Creative Head at Candy Media",
+      description: "Delivered UI/UX and social media projects for multiple clients",
+      date: "Present",
+      color: "from-pink-500 to-purple-500"
+    },
+    {
+      title: "CodeChef 2 Star Coder",
+      description: "Solved 100+ problems and attended regular contests",
       date: "Jan 2025",
       color: "from-red-500 to-orange-500"
     },
     {
-      title: "LeetCode 200+ Problems",
+      title: "LeetCode 150+ Problems",
       description: "Earned 50 Days Badge with consistent problem solving",
       date: "Dec 2024",
       color: "from-yellow-400 to-amber-500"

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X, ArrowRight, Download } from "lucide-react";
+import profilePic from '../assets/icon.png'; // Update this path
 
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -11,6 +12,8 @@ const Navigation = () => {
     { id: 'home', name: 'Home' },
     { id: 'skills', name: 'Skills' },
     { id: 'projects', name: 'Projects' },
+    { id: 'certifications', name: 'Certifications' },
+    { id: 'achievements', name: 'Achievements' },
     { id: 'education', name: 'Education' },
     { id: 'contact', name: 'Contact' }
   ];
@@ -59,12 +62,17 @@ const Navigation = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
-          {/* Logo/Name */}
+          {/* Logo/Name with Profile Picture */}
           <motion.div 
-            className="flex-shrink-0 flex items-center"
+            className="flex-shrink-0 flex items-center gap-3"
             whileHover={{ scale: 1.03 }}
             transition={{ type: 'spring', stiffness: 400, damping: 10 }}
           >
+            <img 
+              src={profilePic} 
+              alt="Ramendra Raman" 
+              className="w-10 h-10 rounded-full object-cover border-2 border-[#5E503F]"
+            />
             <span 
               className="text-2xl font-playfair font-bold cursor-pointer text-[#5E503F]"
               onClick={() => scrollToSection('home')}
@@ -74,7 +82,7 @@ const Navigation = () => {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-4">
             {sections.map((section) => (
               <motion.div
                 key={section.id}
@@ -84,7 +92,7 @@ const Navigation = () => {
               >
                 <button
                   onClick={() => scrollToSection(section.id)}
-                  className={`px-4 py-2 font-medium transition-colors font-inter ${
+                  className={`px-3 py-2 text-sm font-medium transition-colors font-inter ${
                     activeSection === section.id ? 'text-[#004AAD]' : 'text-[#5E503F] hover:text-[#779F06]'
                   }`}
                 >
@@ -102,7 +110,7 @@ const Navigation = () => {
             <motion.a
               href="/ramendraGENCV.pdf"
               download
-              className="flex items-center gap-1 px-4 py-2 rounded-md bg-[#004AAD] text-white hover:bg-[#00388a] transition-colors font-inter"
+              className="flex items-center gap-1 px-4 py-2 rounded-md bg-[#004AAD] text-white hover:bg-[#00388a] transition-colors font-inter text-sm"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -137,7 +145,7 @@ const Navigation = () => {
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <div className="px-2 pt-2 pb-4 space-y-2 sm:px-3">
+          <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3">
             {sections.map((section) => (
               <motion.div
                 key={section.id}
@@ -145,7 +153,7 @@ const Navigation = () => {
               >
                 <button
                   onClick={() => scrollToSection(section.id)}
-                  className={`block px-4 py-3 rounded-md text-lg font-medium w-full text-left transition-colors ${
+                  className={`block px-4 py-3 rounded-md text-base font-medium w-full text-left transition-colors ${
                     activeSection === section.id 
                       ? 'bg-[#004AAD] bg-opacity-10 text-[#004AAD]' 
                       : 'text-[#5E503F] hover:bg-[#779F06] hover:bg-opacity-10 hover:text-[#5E503F]'
@@ -158,7 +166,7 @@ const Navigation = () => {
             <motion.a
               href="/ramendraGENCV.pdf"
               download
-              className="flex items-center justify-center gap-2 px-4 py-3 mx-2 rounded-md bg-[#004AAD] text-white hover:bg-[#00388a] transition-colors font-medium"
+              className="flex items-center justify-center gap-2 px-4 py-3 mx-2 rounded-md bg-[#004AAD] text-white hover:bg-[#00388a] transition-colors font-medium text-sm"
               whileTap={{ scale: 0.98 }}
             >
               Download Resume <Download size={18} />
