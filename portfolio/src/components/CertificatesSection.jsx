@@ -4,6 +4,9 @@ import { FaCertificate, FaExternalLinkAlt, FaAward } from 'react-icons/fa';
 import DesignJava from '../assets/DesignJava.jpg';
 import Frontend from '../assets/Frontend.jpg';
 import Cyber from '../assets/Cyber.jpg';
+import Nlp from '../assets/Nlp.jpg';
+import build from '../assets/build.jpg';
+import CyberEssentials from '../assets/CyberEssentials.jpg';
 
 const certificatesData = [
   {
@@ -31,6 +34,33 @@ const certificatesData = [
     skills: ["HTML/CSS", "JavaScript", "React", "Responsive Design"],
     image: Frontend,
     color: "bg-gradient-to-br from-[#0077B5] to-[#00A0DC]",
+    link: "#"
+  },
+  {
+    title: "Introduction to Cybersecurity Essentials",
+    issuer: "IBM",
+    date: "Mar 2025",
+    skills: ["Cybersecurity Fundamentals", "Network Security", "Risk Management", "Security Best Practices"],
+    image: CyberEssentials, // Add image path if available
+    color: "bg-gradient-to-br from-[#052049] to-[#1F70C1]", // IBM blue gradient
+    link: "#"
+  },
+  {
+    title: "Build Apps with ChatGPT, DALL·E, and GPT-4",
+    issuer: "Coursera",
+    date: "Apr 2025",
+    skills: ["AI Integration", "ChatGPT API", "DALL·E", "GPT-4", "AI App Development"],
+    image: build, // Add image path if available
+    color: "bg-gradient-to-br from-[#0056D2] to-[#00A4E4]", // Coursera blue gradient
+    link: "#"
+  },
+  {
+    title: "ChatGPT Playground for Beginners: Intro to NLP AI",
+    issuer: "Udemy",
+    date: "May 2025",
+    skills: ["Natural Language Processing", "ChatGPT", "AI Fundamentals", "Prompt Engineering"],
+    image: Nlp, // Add image path if available
+    color: "bg-gradient-to-br from-[#5E2B97] to-[#A435F0]", // Udemy purple gradient
     link: "#"
   }
 ];

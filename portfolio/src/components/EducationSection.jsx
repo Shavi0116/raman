@@ -10,7 +10,6 @@ const educationData = [
     field: "Specialization: Cyber Security",
     duration: "Sep 2022 - Present",
     location: "Punjab, India",
-    score: "Current GPA: 8.0/10.0",
     icon: <FaUniversity size={20} />,
     color: "#004AAD",
     highlights: [
@@ -24,7 +23,6 @@ const educationData = [
     degree: "Intermediate",
     duration: "Apr 2020 - Mar 2021",
     location: "J&K, India",
-    score: "Percentage: 75%",
     icon: <FaGraduationCap size={20} />,
     color: "#779F06",
     highlights: [
@@ -38,7 +36,6 @@ const educationData = [
     degree: "Matriculation",
     duration: "Apr 2018 - Mar 2019",
     location: "Dharan, Nepal",
-    score: "Percentage: 80%",
     icon: <FaSchool size={20} />,
     color: "#5E503F",
     highlights: [

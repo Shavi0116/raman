@@ -4,6 +4,7 @@ import { ArrowRight, Download } from "lucide-react";
 import { TypeAnimation } from 'react-type-animation';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
+import profile from '../assets/profile.jpeg'; // Make sure this path is correct
 
 const HeroSection = () => {
   const [particlesInit, setParticlesInit] = useState(null);
@@ -107,9 +108,7 @@ const HeroSection = () => {
           <div className="h-12 md:h-14 lg:h-16">
             <TypeAnimation
               sequence={[
-                'Full-Stack Developer',
-                1500,
-                'AI/ML Engineer',
+                'Developer',
                 1500,
                 'Problem Solver',
                 1500,
@@ -140,15 +139,6 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
         >
-          {/* <motion.a
-            href="/assests/ramendraGENCV"
-            className="inline-flex items-center px-6 py-3 text-white bg-gradient-to-r from-[#779F06] to-[#8BB82A] hover:from-[#5E503F] hover:to-[#6B5D4A] rounded-lg transition-all group shadow-lg hover:shadow-md"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Download Resume
-            <Download className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
-          </motion.a> */}
           <motion.a
             href="#contact"
             className="inline-flex items-center px-6 py-3 text-white bg-gradient-to-r from-[#004AAD] to-[#0066CC] hover:from-[#00367D] hover:to-[#004AAD] rounded-lg transition-all group shadow-lg hover:shadow-md"
@@ -170,10 +160,14 @@ const HeroSection = () => {
       >
         <div className="relative">
           <motion.div
-            className="w-64 h-64 md:w-80 md:h-80 rounded-full shadow-2xl border-4 border-white/90 relative z-10 bg-gradient-to-br from-[#F0E7DA] to-[#D9C9B8] flex items-center justify-center"
+            className="w-64 h-64 md:w-80 md:h-80 rounded-full shadow-2xl border-4 border-white/90 relative z-10 overflow-hidden"
             whileHover={{ scale: 1.05 }}
           >
-            <span className="text-5xl font-bold text-[#5E503F]">RR</span>
+            <img 
+              src={profile} 
+              alt="Ramendra Raman" 
+              className="w-full h-full object-cover"
+            />
           </motion.div>
           <motion.div 
             className="absolute -inset-4 rounded-full bg-gradient-to-r from-[#779F06] to-[#004AAD] blur-xl opacity-30 z-0"
