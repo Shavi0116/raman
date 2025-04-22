@@ -1,10 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCertificate, FaExternalLinkAlt, FaAward } from 'react-icons/fa';
-import design from '../assets/design.jpg';
+import DesignJava from '../assets/DesignJava.jpg';
 import Frontend from '../assets/Frontend.jpg';
 import Cyber from '../assets/Cyber.jpg';
-
 
 const certificatesData = [
   {
@@ -12,24 +11,27 @@ const certificatesData = [
     issuer: "NPTEL",
     date: "Jul 2024",
     skills: ["Human-Computer Interaction", "UI/UX Design"],
-    image: design,
-    color: "bg-gradient-to-br from-[#004AAD] to-[#0066CC]"
+    image: DesignJava,
+    color: "bg-gradient-to-br from-[#004AAD] to-[#0066CC]",
+    link: "#"
   },
   {
     title: "Cybersecurity Analyst Job Simulation",
     issuer: "Tata Forage",
-    date: "Feb 2025", // Update with actual date
+    date: "Feb 2025",
     skills: ["Cybersecurity", "Threat Analysis", "Incident Response", "SIEM Tools"],
     image: Cyber,
-    color: "bg-gradient-to-br from-[#0F4C75] to-[#3282B8]" // Dark blue gradient
+    color: "bg-gradient-to-br from-[#0F4C75] to-[#3282B8]",
+    link: "#"
   },
   {
     title: "Career Path: Front-End Development",
     issuer: "LinkedIn Learning",
-    date: "Mar 2025", // Update with actual date
+    date: "Mar 2025",
     skills: ["HTML/CSS", "JavaScript", "React", "Responsive Design"],
-    image: Frontend, // Add image path if available
-    color: "bg-gradient-to-br from-[#0077B5] to-[#00A0DC]" // LinkedIn blue gradient
+    image: Frontend,
+    color: "bg-gradient-to-br from-[#0077B5] to-[#00A0DC]",
+    link: "#"
   }
 ];
 
@@ -50,19 +52,26 @@ const CertificateCard = ({ certificate, index }) => {
       viewport={{ once: true, margin: "-50px" }}
       whileHover={{ y: -5 }}
     >
-      {/* Gradient hover effect */}
       <div className="absolute -inset-1 bg-gradient-to-r from-[#004AAD] to-[#779F06] rounded-xl opacity-0 group-hover:opacity-10 blur-lg transition-all duration-500"></div>
       
       <div className="relative h-full bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-[#A68A64]/20">
         {/* Certificate Image Header */}
-        <div className={`relative h-40 ${certificate.color} overflow-hidden flex items-center justify-center`}>
-          <motion.div 
-            className="absolute inset-0 flex items-center justify-center"
-            initial={{ scale: 0.9 }}
-            whileHover={{ scale: 1 }}
-          >
-            <FaCertificate className="text-6xl text-white/90" />
-          </motion.div>
+        <div className={`relative h-40 ${certificate.color} overflow-hidden`}>
+          {certificate.image ? (
+            <motion.img
+              src={certificate.image}
+              alt={certificate.title}
+              className="w-full h-full object-cover"
+              initial={{ opacity: 0.9 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              whileHover={{ scale: 1.05 }}
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center">
+              <FaCertificate className="text-6xl text-white/90" />
+            </div>
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-end p-4">
             <FaAward className="text-white text-xl mr-2" />
             <span className="text-white font-medium font-inter">{certificate.issuer}</span>
@@ -78,20 +87,8 @@ const CertificateCard = ({ certificate, index }) => {
             >
               {certificate.title}
             </motion.h3>
-            <motion.a 
-              href={certificate.link} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-[#5E503F]/60 hover:text-[#004AAD] ml-2 flex-shrink-0 p-1 rounded-full hover:bg-[#004AAD]/10"
-              aria-label="View certificate"
-              whileHover={{ scale: 1.2, rotate: 15 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <FaExternalLinkAlt className="text-lg" />
-            </motion.a>
           </div>
           
-          {/* Date */}
           <motion.div 
             className="flex items-center text-sm text-[#5E503F]/80 mb-5 font-inter"
             initial={{ opacity: 0 }}
@@ -104,7 +101,6 @@ const CertificateCard = ({ certificate, index }) => {
             {certificate.date}
           </motion.div>
           
-          {/* Skills */}
           <motion.div 
             className="flex flex-wrap gap-2"
             initial={{ opacity: 0 }}
@@ -141,7 +137,6 @@ const CertificateCard = ({ certificate, index }) => {
 const CertificatesSection = () => {
   return (
     <section id="certifications" className="py-24 bg-gradient-to-b from-[#F0E7DA] to-[#F8F3EC] relative overflow-hidden">
-      {/* Animated background elements */}
       <motion.div 
         className="absolute -left-20 -top-20 w-64 h-64 rounded-full bg-[#004AAD]/10 blur-3xl"
         animate={{
@@ -244,22 +239,6 @@ const CertificatesSection = () => {
               index={index}
             />
           ))}
-        </motion.div>
-
-        {/* View More Button */}
-        <motion.div
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ 
-            opacity: 1, 
-            y: 0,
-            transition: {
-              delay: 0.5,
-              duration: 0.6
-            }
-          }}
-          viewport={{ once: true }}
-        >
         </motion.div>
       </div>
     </section>

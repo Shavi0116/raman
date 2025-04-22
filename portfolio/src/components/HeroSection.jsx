@@ -140,7 +140,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
         >
-          <motion.a
+          {/* <motion.a
             href="/assests/ramendraGENCV"
             className="inline-flex items-center px-6 py-3 text-white bg-gradient-to-r from-[#779F06] to-[#8BB82A] hover:from-[#5E503F] hover:to-[#6B5D4A] rounded-lg transition-all group shadow-lg hover:shadow-md"
             whileHover={{ y: -2 }}
@@ -148,7 +148,7 @@ const HeroSection = () => {
           >
             Download Resume
             <Download className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
-          </motion.a>
+          </motion.a> */}
           <motion.a
             href="#contact"
             className="inline-flex items-center px-6 py-3 text-white bg-gradient-to-r from-[#004AAD] to-[#0066CC] hover:from-[#00367D] hover:to-[#004AAD] rounded-lg transition-all group shadow-lg hover:shadow-md"
